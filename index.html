@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhishGuard - Phishing Detection System</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ================= BACKGROUND ================= -->
+
+<div class="background-grid"></div>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+        <i class="fa-solid fa-shield-halved"></i>
+        <h2>PhishGuard</h2>
+    </div>
+
+    <nav>
+
+        <a href="#scanner">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            Scanner
+        </a>
+
+        <a href="#dashboard">
+            <i class="fa-solid fa-chart-line"></i>
+            Dashboard
+        </a>
+
+        <a href="#history">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            History
+        </a>
+
+        <a href="#about">
+            <i class="fa-solid fa-circle-info"></i>
+            About
+        </a>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <h1>Cyber Security Threat Detection</h1>
+
+    <p>
+
+        Scan URLs, Domains, IP Addresses and Files to detect phishing,
+        malware, suspicious links and cyber threats instantly.
+
+    </p>
+
+</section>
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="card">
+
+        <i class="fa-solid fa-globe"></i>
+
+        <h2 id="totalScan">0</h2>
+
+        <span>Total Scans</span>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-shield-virus"></i>
+
+        <h2 id="safeCount">0</h2>
+
+        <span>Safe</span>
+
+    </div>
+
+    <div class="card danger">
+
+        <i class="fa-solid fa-triangle-exclamation"></i>
+
+        <h2 id="dangerCount">0</h2>
+
+        <span>Threats</span>
+
+    </div>
+
+    <div class="card">
+
+        <i class="fa-solid fa-chart-simple"></i>
+
+        <h2 id="riskAverage">0%</h2>
+
+        <span>Average Risk</span>
+
+    </div>
+
+</section>
+
+<!-- ================= SCANNER ================= -->
+
+<section id="scanner" class="scanner">
+
+<h2>Threat Scanner</h2>
+
+<div class="scanner-box">
+
+<select id="scanType">
+
+<option value="url">URL Scanner</option>
+
+<option value="domain">Domain Scanner</option>
+
+<option value="ip">IP Scanner</option>
+
+<option value="file">File Scanner</option>
+
+</select>
+
+<input
+type="text"
+id="targetInput"
+placeholder="Enter URL, Domain or IP">
+
+<input
+type="file"
+id="fileInput"
+hidden>
+
+<button id="scanBtn">
+
+<i class="fa-solid fa-magnifying-glass"></i>
+
+Start Scan
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= LOADING ================= -->
+
+<section class="loading" id="loading">
+
+<div class="loader"></div>
+
+<h3>Scanning...</h3>
+
+<p>
+
+Checking against phishing rules,
+
+malware signatures,
+
+blacklists,
+
+and AI heuristics...
+
+</p>
+
+</section>
+
+<!-- ================= RESULT ================= -->
+
+<section id="resultSection" class="result">
+
+<h2>Scan Report</h2>
+
+<div class="report">
+
+<div class="resultHeader">
+
+<h3 id="scanTarget">
+
+-
+
+</h3>
+
+<span id="riskLevel">
+
+Safe
+
+</span>
+
+</div>
+
+<div class="progress">
+
+<div id="riskBar"></div>
+
+</div>
+
+<h3>
+
+Risk Score :
+
+<span id="riskScore">
+
+0%
+
+</span>
+
+</h3>
+
+<div class="details">
+
+<div>
+
+<strong>Threat Type</strong>
+
+<p id="threatType">
+
+None
+
+</p>
+
+</div>
+
+<div>
+
+<strong>Status</strong>
+
+<p id="status">
+
+Safe
+
+</p>
+
+</div>
+
+<div>
+
+<strong>Recommendation</strong>
+
+<p id="recommendation">
+
+Safe to visit.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= ENGINE RESULTS ================= -->
+
+<section class="engines">
+
+<h2>
+
+Security Engines
+
+</h2>
+
+<div id="engineContainer"
+
+class="engineContainer">
+
+</div>
+
+</section>
+
+<!-- ================= HISTORY ================= -->
+
+<section id="history">
+
+<h2>
+
+Recent Scan History
+
+</h2>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Target</th>
+
+<th>Type</th>
+
+<th>Risk</th>
+
+<th>Status</th>
+
+<th>Date</th>
+
+</tr>
+
+</thead>
+
+<tbody id="historyTable">
+
+</tbody>
+
+</table>
+
+</section>
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<h2>
+
+About PhishGuard
+
+</h2>
+
+<p>
+
+PhishGuard is a cybersecurity web application built using
+HTML, CSS and JavaScript.
+
+It detects suspicious URLs,
+domains,
+IP addresses
+and uploaded files using heuristic analysis.
+
+This demo performs client-side analysis and simulates
+multiple security engines similar to enterprise
+threat intelligence platforms.
+
+</p>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 PhishGuard
+
+Cyber Security Project
+
+</p>
+
+</footer>
+
+<!-- ================= SCRIPT ================= -->
+
+<script src="script.js"></script>
+
+</body>
+</html>

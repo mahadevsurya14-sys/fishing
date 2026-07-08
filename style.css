@@ -1,0 +1,757 @@
+/* ==========================================
+   PHISHGUARD - STYLE.CSS (PART 1)
+   ========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#060b16;
+    color:#ffffff;
+    overflow-x:hidden;
+}
+
+/* ================= BACKGROUND ================= */
+
+.background-grid{
+    position:fixed;
+    inset:0;
+    background-image:
+    linear-gradient(rgba(0,255,255,.05) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,255,255,.05) 1px,transparent 1px);
+    background-size:40px 40px;
+    z-index:-2;
+}
+
+.background-grid::before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:
+    radial-gradient(circle at top,#00eaff22,transparent 70%);
+}
+
+/* ================= HEADER ================= */
+
+header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:#0a1224;
+
+    border-bottom:1px solid #1e3658;
+
+    position:sticky;
+
+    top:0;
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+}
+
+.logo i{
+
+    font-size:32px;
+
+    color:#00ffff;
+
+}
+
+.logo h2{
+
+    color:#00ffff;
+
+}
+
+nav{
+
+    display:flex;
+
+    gap:25px;
+
+}
+
+nav a{
+
+    color:#ddd;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+    font-size:16px;
+
+}
+
+nav a:hover{
+
+    color:#00ffff;
+
+}
+
+/* ================= HERO ================= */
+
+.hero{
+
+    padding:80px 10%;
+
+    text-align:center;
+
+}
+
+.hero h1{
+
+    font-size:48px;
+
+    color:#00ffff;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    color:#cccccc;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+}
+
+/* ================= DASHBOARD ================= */
+
+.dashboard{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:40px;
+
+}
+
+.card{
+
+    background:#0f172b;
+
+    border:1px solid #19314f;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.4s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 0 25px cyan;
+
+}
+
+.card i{
+
+    font-size:45px;
+
+    color:#00ffff;
+
+    margin-bottom:15px;
+
+}
+
+.card h2{
+
+    font-size:35px;
+
+    margin-bottom:10px;
+
+}
+
+.card span{
+
+    color:#bbb;
+
+}
+
+.card.danger{
+
+    border:1px solid crimson;
+
+}
+
+.card.danger i{
+
+    color:red;
+
+}
+
+/* ================= SCANNER ================= */
+
+.scanner{
+
+    width:90%;
+
+    margin:70px auto;
+
+}
+
+.scanner h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#00ffff;
+
+}
+
+.scanner-box{
+
+    background:#0f172b;
+
+    border-radius:15px;
+
+    border:1px solid #1d3652;
+
+    padding:40px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.scanner select,
+
+.scanner input{
+
+    width:260px;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:8px;
+
+    background:#18253c;
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+.scanner input::placeholder{
+
+    color:#9fa8b4;
+
+}
+
+/* ================= BUTTON ================= */
+
+button{
+
+    padding:14px 30px;
+
+    background:#00d9ff;
+
+    color:#000;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#00ffff;
+
+    box-shadow:0 0 20px cyan;
+
+    transform:scale(1.05);
+
+}
+
+button i{
+
+    margin-right:8px;
+
+}
+
+/* ================= LOADING ================= */
+
+.loading{
+
+    display:none;
+
+    text-align:center;
+
+    margin-top:40px;
+
+}
+
+.loader{
+
+    width:70px;
+
+    height:70px;
+
+    margin:auto;
+
+    border:7px solid #123;
+
+    border-top:7px solid cyan;
+
+    border-radius:50%;
+
+    animation:spin 1s linear infinite;
+
+}
+
+.loading h3{
+
+    margin-top:20px;
+
+    color:#00ffff;
+
+}
+
+.loading p{
+
+    margin-top:15px;
+
+    color:#bbbbbb;
+
+    line-height:1.6;
+
+}
+
+/* ================= SECTION ================= */
+
+section{
+
+    padding-bottom:40px;
+
+}
+/* ==========================================
+   PHISHGUARD - STYLE.CSS (PART 2)
+   ========================================== */
+
+/* ================= RESULT ================= */
+
+.result{
+    width:90%;
+    margin:40px auto;
+}
+
+.result h2{
+    text-align:center;
+    color:#00ffff;
+    margin-bottom:25px;
+}
+
+.report{
+    background:#0f172b;
+    border:1px solid #1c3555;
+    border-radius:15px;
+    padding:30px;
+}
+
+.resultHeader{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.resultHeader h3{
+    font-size:24px;
+    word-break:break-word;
+}
+
+#riskLevel{
+    padding:8px 18px;
+    border-radius:30px;
+    background:#00b894;
+    color:#fff;
+    font-weight:600;
+}
+
+.progress{
+    width:100%;
+    height:18px;
+    background:#17233b;
+    border-radius:30px;
+    overflow:hidden;
+    margin:25px 0;
+}
+
+#riskBar{
+    width:0%;
+    height:100%;
+    background:linear-gradient(90deg,#00ff99,#ffff00,#ff0000);
+    transition:1s;
+}
+
+.details{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    margin-top:30px;
+}
+
+.details div{
+    background:#162238;
+    padding:20px;
+    border-radius:10px;
+    border:1px solid #20385d;
+}
+
+.details strong{
+    color:#00ffff;
+}
+
+.details p{
+    margin-top:10px;
+    color:#d6d6d6;
+    line-height:1.6;
+}
+
+/* ================= ENGINE RESULTS ================= */
+
+.engines{
+    width:90%;
+    margin:60px auto;
+}
+
+.engines h2{
+    text-align:center;
+    color:#00ffff;
+    margin-bottom:30px;
+}
+
+.engineContainer{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.engineCard{
+    background:#0f172b;
+    border:1px solid #21395d;
+    border-radius:12px;
+    padding:20px;
+    transition:.35s;
+}
+
+.engineCard:hover{
+    transform:translateY(-6px);
+    box-shadow:0 0 15px rgba(0,255,255,.4);
+}
+
+.engineCard h3{
+    margin-bottom:12px;
+    color:#ffffff;
+}
+
+.engineCard p{
+    margin:8px 0;
+    color:#d5d5d5;
+}
+
+.clean{
+    color:#00ff88;
+    font-weight:bold;
+}
+
+.warning{
+    color:#ffd500;
+    font-weight:bold;
+}
+
+.danger{
+    color:#ff3b3b;
+    font-weight:bold;
+}
+
+/* ================= HISTORY ================= */
+
+#history{
+    width:90%;
+    margin:60px auto;
+}
+
+#history h2{
+    text-align:center;
+    color:#00ffff;
+    margin-bottom:25px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    overflow:hidden;
+    border-radius:10px;
+}
+
+thead{
+    background:#12213a;
+}
+
+thead th{
+    padding:16px;
+    color:#00ffff;
+}
+
+tbody tr{
+    border-bottom:1px solid #20385d;
+}
+
+tbody tr:nth-child(even){
+    background:#101a2d;
+}
+
+tbody tr:hover{
+    background:#17253f;
+}
+
+tbody td{
+    padding:14px;
+    text-align:center;
+    color:#ddd;
+}
+
+/* ================= ABOUT ================= */
+
+#about{
+    width:90%;
+    margin:60px auto;
+    text-align:center;
+}
+
+#about h2{
+    color:#00ffff;
+    margin-bottom:20px;
+}
+
+#about p{
+    max-width:900px;
+    margin:auto;
+    color:#cccccc;
+    line-height:1.8;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    margin-top:60px;
+    padding:25px;
+    text-align:center;
+    background:#0a1224;
+    border-top:1px solid #1b3353;
+}
+
+footer p{
+    color:#aaa;
+}
+
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#08111f;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00d9ff;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#00ffff;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes spin{
+    from{
+        transform:rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.hero,
+.card,
+.report,
+.engineCard,
+table,
+#about{
+    animation:fadeIn .8s ease;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.hero h1{
+    font-size:38px;
+}
+
+.resultHeader{
+    flex-direction:column;
+    align-items:flex-start;
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+    text-align:center;
+}
+
+nav{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.scanner-box{
+    flex-direction:column;
+}
+
+.scanner select,
+.scanner input,
+button{
+    width:100%;
+}
+
+.hero h1{
+    font-size:30px;
+}
+
+.dashboard{
+    grid-template-columns:1fr;
+}
+
+.details{
+    grid-template-columns:1fr;
+}
+
+.engineContainer{
+    grid-template-columns:1fr;
+}
+
+table{
+    display:block;
+    overflow-x:auto;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero{
+    padding:50px 20px;
+}
+
+.hero h1{
+    font-size:26px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.card{
+    padding:20px;
+}
+
+.report{
+    padding:20px;
+}
+
+.logo h2{
+    font-size:22px;
+}
+
+nav a{
+    font-size:14px;
+}
+
+button{
+    font-size:15px;
+}
+
+}
