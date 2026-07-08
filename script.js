@@ -622,30 +622,7 @@ function createEngineCards(report){
 
     const engines=[
 
-        "VirusTotal",
-
-        "Google Safe Browsing",
-
-        "OpenPhish",
-
-        "PhishTank",
-
-        "Microsoft Defender",
-
-        "MalwareBytes",
-
-        "Kaspersky",
-
-        "Bitdefender",
-
-        "Avast",
-
-        "Norton",
-
-        "McAfee",
-
-        "ESET"
-
+        
     ];
 
     engines.forEach(function(name){
